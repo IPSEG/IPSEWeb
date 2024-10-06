@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: traffic-dev
+
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/ipse
+    username: postgres
+    password: qwe123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true

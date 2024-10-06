@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: traffic-local
+
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/ipse
+    username: postgres
+    password: qwe123
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+
+    defer-datasource-initialization: true
+
+  openapi:
+    subway:
+      apiKey: test
+      url:
+        arrivalInfo: http://swopenAPI.seoul.go.kr/api/subway/%s/json/realtimeStationArrival/%s/%s/%s
+
+    busStop:
+      apiKey: ENC(AUw9mJhN8RLlXXe2dO6ZL8m2Tynqa0neV99nYpxZgDbo2wUjrKCzKp4WbdiPIg3GVk/6z0oar39YYR5b3HFyOAZ7v9p65Wrssj2rau0cqGjIJnCj9rDMCLRDdtHI491rkmQ9B4Fw8qg=)
+      url:
+        busStopInfo: https://api.odcloud.kr/api/15067528/v1/uddi:eb02ec03-6edd-4cb0-88b8-eda22ca55e80?page=%d&perPage=%d&serviceKey=%s
+
+
+  sql:
+    init:
+      mode: always
+
+  batch:
+    scheduler:
+      max_thread_count: 4
+
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: always
+
+
+
+
+

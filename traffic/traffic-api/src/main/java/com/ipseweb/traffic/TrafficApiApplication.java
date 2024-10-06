@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @Slf4j
-public class TrafficApplication {
+public class TrafficApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TrafficApplication.class, args);
+		SpringApplication.run(TrafficApiApplication.class, args);
 	}
 
 }
